@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piza Menu</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 80%;
+            height: 60%;
+            background-color: bisque;
+            margin-left: 200px;
+            margin-top: 160px;
+        }
+        .header{
+            width: 100%;
+            height: 10%;
+            font-size: 40px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+            padding-top: 80px;
+        }
+        button{
+            width: 200px;
+            height: 50px;
+            background-color: blueviolet;
+            color: white;
+            margin-left: 670px;
+            border-radius: 10px;
+        }
+        button:hover {
+        background-color: rgb(214, 8, 8);
+        cursor: pointer;
+}
+        .output{
+            width: 350px;
+            height: 50px;
+            background-color: rgb(116, 255, 116);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 590px;
+            font-size: 20px;
+            font-family: serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Pizza Menu</div>
+        <br/>
+        <br/>
+        <button onclick="getPizzaSize(1)">Small Size Pizza: ₹140</button>
+        <br/>
+        <br/>
+        <button onclick="getPizzaSize(2)">Medium Size Pizza: ₹250</button>
+        <br/>
+        <br/>
+        <button onclick="getPizzaSize(3)">Large Size Pizza: ₹400</button>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div id="output" class="output"></div>
+    </div>
+
+    <script>
+        function getPizzaSize(getSize){
+            let size = getSize;
+            let GreetingMessage = "";
+
+            switch(size){
+                case 1 :
+                GreetingMessage = "You Select : Small Size Pizza: ₹140";
+                break;
+                case 2 :
+                GreetingMessage = "You Select : Medium Size Pizza: ₹250";
+                break;
+                case 3 : 
+                GreetingMessage = "You Select : Large Size Pizza: ₹400";
+                break;
+            }
+            document.getElementById("output").innerHTML = GreetingMessage;
+        }
+    </script>
+</body>
+</html>

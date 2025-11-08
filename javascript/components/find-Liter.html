@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liter Finder</title>
+    <style>
+        input{
+            width: 350px;
+            height: 20px;
+        }
+        button{
+            height: 40px;
+            background-color: greenyellow;
+            margin-right: 30px;
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <h1>Liter Finder</h1>
+            <br><br>
+            <label><h3>Enter Kilometer:</h3></label>
+            <input type="number" id="kilometer">
+            <br><br>
+            <label><h3>Enter Average:</h3></label>
+            <input type="number" id="average"><br><br>
+            <button onclick="liter()">Calculate</button>
+            <button><a href="../components/find-average.html">Average Finder</a></button>
+            <br>
+            <a href="../index.html"><h3><--back</h3></a><br>
+            <div id="output"></div>
+        </div>
+    </div>
+    <script>
+        function liter(){
+            let kilo = document.getElementById("kilometer").value;
+            let average = document.getElementById("average").value;
+            let liter = (kilo/average);
+            let price = 104.70;
+            document.getElementById("output").innerHTML ="Their an " + liter + " Liter will be needed to go."+ "<br><br>" + " Thier Price will Costier to Travel " + "Rs. " + liter * price  ;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Function Class</title>
+        <style>
+        body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        background-color: gainsboro;
+    }
+    .container{
+        width: 700px;
+        height: 600px;
+        background-color: white;
+        margin-left: 600px;
+        margin-top: 200px;
+    }
+    .header{
+        text-align: center;
+        font-size: 40px;
+        font-family: cursive;
+        margin-top: 200px;
+        margin-bottom: 20px;
+        padding-top: 60px;
+    }
+    label{
+        margin-left: 100px;
+        font-size: 20px;
+    }
+    input{
+        width: 300px;
+        margin-left: 100px;
+        font-size: 15px;
+    }
+    button{
+        width: 200px;
+        height: 35px;
+        margin-left: 100px;
+        font-size: 20px;
+        background-color: rgb(40, 231, 40);
+    }
+    .output{
+        font-family: monospace;
+        font-size: 30px;
+        text-align: center;
+    }
+</style>
+    </head>
+    <body>
+        <!--UI Layout-->
+        <div class="container">
+            <div class="header">Calculate Hours From Days Page </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <label>Enter Days: </label>
+            <br />
+            <input type="number" id="number" placeholder="Enter Days">
+            <br />
+            <br />
+            <br />
+            <br />
+            <button onclick="ConvertToHours()">Convert To Hours</button>
+            <br />
+            <br />
+            <button onclick="ConvertToMinutes()">Convert To Minutes</button>
+            <button onclick="ConvertToSeconds()">Convert To Second</button>
+            <br />
+            <br />
+            <br />
+            <div class="output" id="output">Output Shows Here</div>
+        </div>
+        <script>
+        //Convert Days To Hours
+         function ConvertToHours(){
+        //For Getting Input From User
+        let number = document.getElementById("number").value;
+        //For Getting Output From User
+        let hours = "";
+
+        //checking condition 
+        if(number < 0)
+        {
+            hours = " Invalid input: Number of days cannot be negative. Please enter a positive number."
+            // display Output
+            document.getElementById("output").innerHTML = hours;
+        }
+        else
+        {
+        hours = 24 * number;
+        // display Output
+        document.getElementById("output").innerHTML = hours + " Hours";
+        }
+    }
+
+    //Convert Days To Minutes
+    function ConvertToMinutes(){
+        //For Getting Input From User
+        let number = document.getElementById("number").value;
+        //For Getting Output From User
+        let minutes = "";
+
+        if(number < 0){
+            minutes = " Invalid input: Number of days cannot be negative. Please enter a positive number."
+            document.getElementById("output").innerHTML = minutes;
+        }
+        else{
+        //checking condition 
+        minutes = 24 * 60 * number;
+         document.getElementById("output").innerHTML = minutes + " Minutes";
+        }
+        // display Output
+    }
+
+    //Convert Days To Seconds
+    function ConvertToSeconds(){
+        //For Getting Input From User
+        let number = document.getElementById("number").value;
+        //For Getting Output From User
+        let second = "";
+
+        if(number < 0){
+            second = " Invalid input: Number of days cannot be negative. Please enter a positive number."
+            // display Output
+            document.getElementById("output").innerHTML = second;
+        }
+        else{
+        //checking condition 
+        second = 24 * 60 * 60 * number;
+        // display Output
+        document.getElementById("output").innerHTML = second + " Seconds";
+        }
+    }
+    </script>
+    </body>
+</html>

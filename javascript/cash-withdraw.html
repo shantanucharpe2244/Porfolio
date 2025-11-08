@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Withdraw</title>
+    <style>
+        body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        background-color: gainsboro;
+    }
+    .container{
+        width: 700px;
+        height: 600px;
+        background-color: white;
+        margin-left: 600px;
+        margin-top: 200px;
+    }
+    .header{
+        text-align: center;
+        font-size: 40px;
+        font-family: cursive;
+        margin-top: 200px;
+        margin-bottom: 20px;
+        padding-top: 60px;
+    }
+    .current{
+        text-align: center;
+        font-size: 25px;
+        padding-right: 30px;
+    }
+    .balance{
+        text-align: center;
+        font-size: 30px;
+        padding-right: 30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    label{
+        margin-left: 100px;
+        font-size: 20px;
+    }
+    input{
+        width: 300px;
+        margin-left: 100px;
+        font-size: 15px;
+    }
+    button{
+        width: 500px;
+        height: 35px;
+        margin-left: 100px;
+        font-size: 20px;
+        background-color: rgb(40, 231, 40);
+    }
+    .output{
+        font-family: monospace;
+        font-size: 30px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+            <div class="header">ATM Withdrawal</div>
+            <br/>
+            <br/>
+            <div class="current">Current Balance</div>
+            <div class="balance" id="balance">₹ 10000</div>
+            <br/>
+            <br/>
+            <br/>
+            <input type="number" id="number" placeholder="Enter Amount To Be Withdrawn"/>
+            <br/>
+            <br/>
+            <button onclick="CheckPN()">Withdrawal</button>
+            <br/>
+            <br/>
+            <br/>
+            <div class="output" id="output">Withdrawal Status</div>
+    </div>
+    <script>
+        function CheckPN() {
+            let amount = document.getElementById("number").value;
+            let balance = 10000;
+            let n = 10;
+
+            if(amount > 0){
+                if(amount <= balance){
+                    document.getElementById("output").innerHTML = "Withdrawal Successful";
+                    update = balance - amount;
+                    document.getElementById("balance").innerHTML = "₹ " + update;
+                    balance = update;
+                }
+                else{
+                    document.getElementById("output").innerHTML = "Insufficient Balance";
+                }
+            }else  {
+                document.getElementById("output").innerHTML = "Invalid Amount";
+            }
+        }
+        
+
+    </script>
+</body>
+</html>

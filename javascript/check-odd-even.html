@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Function Class</title>
+        <style>
+        body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        background-color: gainsboro;
+    }
+    .container{
+        width: 700px;
+        height: 600px;
+        background-color: white;
+        margin-left: 600px;
+        margin-top: 200px;
+    }
+    .header{
+        text-align: center;
+        font-size: 40px;
+        font-family: cursive;
+        margin-top: 200px;
+        margin-bottom: 20px;
+        padding-top: 60px;
+    }
+    label{
+        margin-left: 100px;
+        font-size: 20px;
+    }
+    input{
+        width: 300px;
+        margin-left: 100px;
+        font-size: 15px;
+    }
+    button{
+        width: 500px;
+        height: 35px;
+        margin-left: 100px;
+        font-size: 20px;
+        background-color: rgb(40, 231, 40);
+    }
+    .output{
+        font-family: monospace;
+        font-size: 30px;
+        text-align: center;
+    }
+</style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">Check Even Or Odd </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <label>Enter Number To Check Even Or Odd: </label>
+            <br />
+            <input type="number" id="number" placeholder="Enter Number">
+            <br />
+            <br />
+            <br />
+            <br />
+            <button onclick="CheckPN()">Check Here</button>
+            <br />
+            <br />
+            <br />
+            <div class="output" id="output">Output Shows Here</div>
+        </div>
+        <script>
+         function CheckPN(){
+        //For Getting Input From User
+        let number = document.getElementById("number").value;
+
+        //For Getting Output From User
+        let area = "";
+
+        //checking condition 
+        if(number % 2 == 0){
+            result = "Even";
+        }
+        else{
+            result = "Odd";
+        }
+       
+        // display Output
+        document.getElementById("output").innerHTML = result;
+    }
+    </script>
+    </body>
+</html>

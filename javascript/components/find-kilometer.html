@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kilometer Finder</title>
+    <style>
+        input{
+            width: 350px;
+            height: 20px;
+        }
+        button{
+            height: 40px;
+            background-color: greenyellow;
+            margin-right: 30px;
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <h1>Kilometer Finder</h1>
+            <br><br>
+            <label><h3>Enter How Much Liter Take:</h3></label>
+            <input type="number" id="liter">
+            <br><br>
+            <label><h3>Enter What's Average</h3></label>
+            <input type="number" id="average"><br><br>
+            <button onclick="kilometer()">Calculate</button>
+            <button><a href="../components/find-average.html">Average Finder</a></button>
+            <br>
+            <a href="../index.html"><h3><--back</h3></a><br><br>
+            <div id="output"></div>
+        </div>
+    </div>
+    <script>
+        function kilometer(){
+            let liter = document.getElementById("liter").value;
+            let average = document.getElementById("average").value;
+            let kilometer = liter * average;
+            document.getElementById("output").innerHTML = kilometer + " Km Will be Run...";
+        }
+    </script>
+</body>
+</html>

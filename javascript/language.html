@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 80%;
+        height: 60%;
+        background-color: bisque;
+        margin-left: 200px;
+        margin-top: 160px;
+      }
+      .header {
+        width: 100%;
+        height: 10%;
+        font-size: 40px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        text-align: center;
+        padding-top: 80px;
+        padding-bottom: 60px;
+      }
+      label {
+        margin-left: 650px;
+      }
+      select {
+        margin-left: 650px;
+        width: 200px;
+      }
+      button {
+        width: 150px;
+        height: 30px;
+        background-color: blueviolet;
+        color: white;
+        margin-left: 670px;
+        border-radius: 10px;
+      }
+      .output {
+        width: 320px;
+        height: 50px;
+        background-color: rgb(116, 255, 116);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 600px;
+        font-size: 20px;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">Language Translator</div>
+      <label>Enter The Language : </label>
+      <br />
+      <br />
+      <select name id="language">
+        <option value="en">ENGLISH</option>
+        <option value="hi">HINDI</option>
+        <option value="fr">FRENCH</option>
+        <option value="es">SPANISH</option>
+      </select>
+      <br />
+      <br />
+      <button onclick="translateLanguage()">Translate</button>
+      <br />
+      <br />
+      <div class="output" id="output">Output Show Here</div>
+    </div>
+
+    <script>
+      function translateLanguage() {
+        let language = document.getElementById("language").value;
+        let show = "";
+        switch (language) {
+          case "en":
+            show = "Hello Friend";
+            break;
+          case "hi":
+            show = "नमस्ते";
+            break;
+          case "fr":
+            show = "Bonjour";
+            break;
+          case "es":
+            show = "Hola";
+            break;
+          default:
+            show = "Invalid Language";
+            break;
+        }
+        document.getElementById("output").innerHTML = show;
+      }
+    </script>
+  </body>
+</html>
