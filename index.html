@@ -72,24 +72,42 @@
         border-radius: 25px;
         padding: 6px 16px;
     }
-    .btn {
-    display: block;
-    margin: 0 auto 15px;
-    padding: 10px 20px;
-    font-weight: 500;
-    border-radius: 8px;
-    border: 2px solid black;
-    transition: all 0.3s ease;
-    color: black;
-    background-color: white;
-  }
 
-  /* Button hover */
-  .btn:hover {
-    background-color: black;
-    color: white;
-    transform: scale(1.05);
-  }
+    .btn {
+        display: block;
+        margin: 0 auto 15px;
+        padding: 10px 20px;
+        font-weight: 500;
+        border-radius: 8px;
+        border: 2px solid black;
+        transition: all 0.3s ease;
+        color: black;
+        background-color: white;
+    }
+
+    /* Button hover */
+    .btn:hover {
+        background-color: black;
+        color: white;
+        transform: scale(1.05);
+    }
+
+    #contact-us img {
+        border-radius: 8px;
+        padding: 4px;
+        background: white;
+        transition: transform 0.2s;
+    }
+
+    #contact-us a {
+        color: #007bff;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    #contact-us img:hover {
+        transform: scale(1.1);
+    }
 </style>
 
 <body>
@@ -153,10 +171,10 @@
                 <br><br>
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                     <a href="./assets/Shantanu Charpe Resume.pdf" download>
-                        <button type="button" class="btn btn-primary btn-lg px-4 gap-3">⭳ Download CV</button>
+                        <button type="button" class="btn btn-primary btn-lg px-4 gap-3"><img width="30" height="30" src="data:image/png;base64,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"> Download CV</button>
                     </a><br><br>
-                    <a href="projects"><button  type="button" class="btn btn-outline-secondary btn-lg px-4">👁️ View
-                        Projects</button></a>
+                    <a href="projects"><button type="button" class="btn btn-outline-secondary btn-lg px-4">👁️ View
+                            Projects</button></a>
                 </div>
             </div>
         </div>
@@ -346,7 +364,8 @@
                             <div class="card-body">
                                 <h5 class="card-title text-center">CSS Projects</h5>
                             </div>
-                            <a href="./pages/Css Projects/Css.html" class="btn border-4 black" class="btn">See Projects</a>
+                            <a href="./pages/Css Projects/Css.html" class="btn border-4 black" class="btn">See
+                                Projects</a>
                         </div>
                     </div>
 
@@ -358,7 +377,8 @@
                             <div class="card-body">
                                 <h5 class="card-title text-center">JavaScript Projects</h5>
                             </div>
-                            <a href="./pages/JavaScript Projects/javascript.html" class="btn border-4 black" class="btn">See Projects</a>
+                            <a href="./pages/JavaScript Projects/javascript.html" class="btn border-4 black"
+                                class="btn">See Projects</a>
                         </div>
                     </div>
 
@@ -403,20 +423,37 @@
                     <div id="contact-us">
                         <div class="px-4 pt-5 my-5 text-center border-bottom">
                             <h1 class="display-4 fw-bold">Contact Us</h1><br><br>
-                            <div class="col-lg-6 mx-auto">
-                                <p class="lead mb-4">
-                                <div>Email Id : <a href="mailto: shantanucharpe2244@gmail.com">shantanucharpe2244@gmail.com</a></div><br>
-                                <div>Phone Number: <a href="tel: +91 7798132223">7798132223</a></div><br>
-                                <div>Linkdin: <a
-                                        href="https://www.linkedin.com/in/shantanu-charpe-ba7459290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">linkedin.com/in/shantanucharpe
-                                    </a></div><br>
-                                <div>GitHub: <a
-                                        href="https://github.com/dashboard">github.com/shantanucharpe</a>
-                                </div>
-                                </p>
-                            </div>
+
+                            <div style="display: flex; justify-content: center; gap: 25px; align-items: center;">
+
+                                <!-- Email Icon -->
+                                <a href="mailto:shantanucharpe2244@gmail.com">
+                                    <img src="data:image/png;base64,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"
+                                        width="60" height="60" alt="Gmail">
+                                </a>
+
+                                <!-- Phone Icon -->
+                                <a href="tel:+917798132223">
+                                    <img src="data:image/png;base64,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"
+                                        width="60" height="60" alt="Phone">
+                                </a>
+
+                                <!-- LinkedIn Icon -->
+                                <a href="https://www.linkedin.com/in/shantanu-charpe-ba7459290">
+                                    <img src="data:image/png;base64,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"
+                                        width="60" height="60" alt="LinkedIn">
+                                </a>
+
+                                <!-- GitHub Icon -->
+                                <a href="https://github.com/dashboard">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+                                        width="60" height="60" alt="GitHub">
+                                </a>
+
+                            </div><br><br><br>
                         </div>
                     </div>
+                    <!--Contact Us Ends-->
                 </div>
             </div>
         </section>
